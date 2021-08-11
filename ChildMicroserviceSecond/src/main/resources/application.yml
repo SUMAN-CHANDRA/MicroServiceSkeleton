@@ -1,0 +1,38 @@
+### Spring properties
+# Service registers under this name
+spring:
+  zipkin:
+    base-url: http://localhost:7777/
+  sleuth:
+   sampler:
+    probability: 1
+  application:
+    name: ChildSecond-microservice
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: suman.puku@gmail.com
+    password: VIVEKANANDA
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    
+
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:1111/eureka/
+
+# HTTP Server (Tomcat) Port
+server: 
+  port: 3333
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false
+    
